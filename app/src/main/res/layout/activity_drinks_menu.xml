@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DrinksMenu">
+
+    <RelativeLayout
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:gravity="center" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="EzyFoody: Drinks"
+        android:textColor="#000"
+        android:textSize="12pt" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonMyOrder2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="viewMyOrder"
+        android:text="My Order" />
+
+    <GridLayout
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:text="Air Mineral\nRp. 123"
+            android:id="@+id/buttonAir"
+            />
+        <Button
+            android:layout_width="140dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:text="Jus Apel\nRp. 123"
+            android:id="@+id/buttonApel"
+            />
+        <Button
+            android:layout_width="140dp"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:text="Jus Mangga\nRp. 123"
+            android:id="@+id/buttonMangga"
+            />
+        <Button
+            android:layout_width="140dp"
+            android:layout_column="2"
+            android:layout_row="2"
+            android:text="Jus Alpukat\nRp. 123"
+            android:id="@+id/buttonAlpukat"
+            />
+    </GridLayout>
+
+
+
+</LinearLayout>
