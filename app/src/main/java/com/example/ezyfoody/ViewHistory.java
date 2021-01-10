@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -48,5 +49,8 @@ public class ViewHistory extends AppCompatActivity {
 
             table.addView(tr);
         }
+        LinearLayout ll = findViewById(R.id.tableMyHistory);
+        ll.addView(table);
+
     }
 }

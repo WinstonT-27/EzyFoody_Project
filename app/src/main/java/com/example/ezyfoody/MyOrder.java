@@ -95,7 +95,6 @@ public class MyOrder extends AppCompatActivity {
         else{
             Runner.money = Runner.money - Runner.totalPrice();
             Runner.transfer();
-            Runner.orderlist.clear();
             Intent intent = new Intent(MyOrder.this, Maps.class);
             startActivity(intent);
         }
