@@ -57,6 +57,15 @@ public class SnackMenu extends AppCompatActivity {
                 viewMyOrder(v);
             }
         });
+
+        Button back = findViewById(R.id.buttonBackToMain);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SnackMenu.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     public void viewMyOrder(View view) {
