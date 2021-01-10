@@ -24,6 +24,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Runner.initialize();
+
+        Button food = findViewById(R.id.buttonFood);
+        food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FoodMenu.class);
+                startActivity(intent);
+            }
+        });
+
         Button buttonMyOrder = findViewById(R.id.buttonMyOrder);
         buttonMyOrder.setOnClickListener(new View.OnClickListener() {
             @Override
