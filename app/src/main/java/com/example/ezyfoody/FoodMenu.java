@@ -7,46 +7,46 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class DrinksMenu extends AppCompatActivity {
+public class FoodMenu extends AppCompatActivity {
 
     public static final String MENU= "Menu";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drinks_menu);
+        setContentView(R.layout.activity_food_menu);
+
         Intent intent = getIntent();
 
-        Button b1 = findViewById(R.id.buttonAir);
-        Button b2 = findViewById(R.id.buttonApel);
-        Button b3 = findViewById(R.id.buttonMangga);
-        Button b4 = findViewById(R.id.buttonAlpukat);
+        Button b1 = findViewById(R.id.buttonNasiPutih);
+        Button b2 = findViewById(R.id.buttonNasiKuning);
+        Button b3 = findViewById(R.id.buttonBurger);
+        Button b4 = findViewById(R.id.buttonHotDog);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendMessage(v, "Air Mineral");
+                sendMessage(v, "Nasi Putih");
             }
         });
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendMessage(v, "Jus Apel");
+                sendMessage(v, "Nasi Kuning");
             }
         });
 
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendMessage(v, "Jus Mangga");
+                sendMessage(v, "Burger");
             }
         });
 
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendMessage(v, "Jus Alpukat");
+                sendMessage(v, "Hot Dog");
             }
         });
 
@@ -60,15 +60,14 @@ public class DrinksMenu extends AppCompatActivity {
     }
 
     public void viewMyOrder(View view) {
-        Intent intent = new Intent(DrinksMenu.this, MyOrder.class);
+        Intent intent = new Intent(FoodMenu.this, MyOrder.class);
         startActivity(intent);
     }
 
     public void sendMessage(View view, String x){
         String order = x;
-        Intent intent = new Intent(DrinksMenu.this, Quantity.class);
+        Intent intent = new Intent(FoodMenu.this, Quantity.class);
         intent.putExtra(MENU, order);
         startActivity(intent);
     }
-
 }

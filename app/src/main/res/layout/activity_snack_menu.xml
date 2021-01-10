@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".DrinksMenu">
-
+    tools:context=".SnackMenu"
+    android:orientation="vertical">
     <RelativeLayout
-    android:id="@+id/header"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:gravity="center" >
-
-    <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="EzyFoody: Drinks"
-        android:textColor="#000"
-        android:textSize="12pt" />
+        android:layout_alignParentTop="true"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="EzyFoody: Snacks"
+            android:textColor="#000"
+            android:textSize="12pt" />
     </RelativeLayout>
 
     <Button
@@ -31,8 +30,8 @@
         android:text="My Order" />
 
     <GridLayout
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
+        android:paddingRight="0dp"
+        android:paddingTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
@@ -41,29 +40,29 @@
             android:layout_width="140dp"
             android:layout_column="1"
             android:layout_row="1"
-            android:text="Air Mineral\nRp. 123"
-            android:id="@+id/buttonAir"
+            android:text="Risoles\nRp. 100"
+            android:id="@+id/buttonRisoles"
             />
         <Button
             android:layout_width="140dp"
             android:layout_column="2"
             android:layout_row="1"
-            android:text="Jus Apel\nRp. 123"
-            android:id="@+id/buttonApel"
+            android:text="Pukis\nRp. 100"
+            android:id="@+id/buttonPukis"
             />
         <Button
             android:layout_width="140dp"
             android:layout_column="1"
             android:layout_row="2"
-            android:text="Jus Mangga\nRp. 123"
-            android:id="@+id/buttonMangga"
+            android:text="Bolu\nRp. 80"
+            android:id="@+id/buttonBolu"
             />
         <Button
             android:layout_width="140dp"
             android:layout_column="2"
             android:layout_row="2"
-            android:text="Jus Alpukat\nRp. 123"
-            android:id="@+id/buttonAlpukat"
+            android:text="Martabak\nRp. 150"
+            android:id="@+id/buttonMartabak"
             />
     </GridLayout>
 
@@ -75,5 +74,4 @@
         android:text="Back"
         android:layout_gravity="right"
         />
-
 </LinearLayout>

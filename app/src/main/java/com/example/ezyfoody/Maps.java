@@ -51,20 +51,11 @@ public class Maps extends FragmentActivity implements OnMapReadyCallback {
     Location currentLocation;
     FusedLocationProviderClient fusedLocationProviderClient;
     private static final int REQUEST_CODE = 101;
-    PlacesClient placesClient;
-    String address;
-    LatLng ll;
-    private String placeId;
-    private List placeLikelihoods;
-    List placeFields = Arrays.asList(Place.Field.ID, Place.Field.NAME, Place.Field.ADDRESS);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
-
-        Places.initialize(getApplicationContext(), "AIzaSyCVflNseS9yuIU88-GOz3vig_sTOxkdD1g");
-        placesClient = Places.createClient(this);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLocation();

@@ -19,10 +19,11 @@ public class Quantity extends AppCompatActivity {
         setContentView(R.layout.activity_quantity);
 
         Intent intent = getIntent();
-        final String order = intent.getStringExtra(DrinksMenu.MENU);
+        final String order = intent.getStringExtra("Menu");
+        final int price = Integer.parseInt(Runner.getPrice(order));
 
         final TextView tv = findViewById(R.id.textViewMenuQuantity);
-        tv.setText(order + " Rp. 123");
+        tv.setText(order + " Rp. "+ price);
 
         Button button = findViewById(R.id.buttonSubmit);
         button.setOnClickListener(new View.OnClickListener() {
@@ -31,22 +32,21 @@ public class Quantity extends AppCompatActivity {
                 EditText et = findViewById(R.id.editTextQunatity);
                 String quantity = et.getText().toString();
                 int x = Integer.parseInt(quantity);
-                Runner.addOrder(order, 123, x);
+                Runner.addOrder(order, price, x);
                 Toast toast = Toast.makeText(getApplicationContext(), "Order success", Toast.LENGTH_SHORT);
                 toast.show();
 
                 et.setText("");
 
-             //   tv.setText(order + "fomodfkds");
-
             }
         });
+
 
         Button back = findViewById(R.id.buttonOrderMore);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Quantity.this, DrinksMenu.class);
+                Intent intent = new Intent(Quantity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
