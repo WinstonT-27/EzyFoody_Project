@@ -35,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button snack = findViewById(R.id.buttonSnacks);
+        snack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SnackMenu.class);
+                startActivity(intent);
+            }
+        });
+
         Button buttonMyOrder = findViewById(R.id.buttonMyOrder);
         buttonMyOrder.setOnClickListener(new View.OnClickListener() {
             @Override
