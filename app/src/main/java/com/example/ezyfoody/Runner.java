@@ -28,8 +28,8 @@ public class Runner {
     }
 
     public static void transfer() {
-        for(Order o: orderlist){
-            historylist.add(o);
+        for(int i=0; i<orderlist.size(); i++){
+            historylist.add(orderlist.get(i));
         }
 
     }
